@@ -1,0 +1,67 @@
+TASK 11
+Menus, Forms and Reports
+Aim:
+To designing an application with Oracle Forms, Menus and Report Builder involves creating a user interface (UI) using Forms and generating reports using Report Builder. 
+
+Install Oracle Forms and Report Builder:
+Ensure that the Oracle Forms and Report Builder installed on your development machine.
+Design the Data Model:
+In Oracle Forms to define the data model that connects to the database schema. Use the Data Block Wizard to create data blocks that represent the tables or views. Ensure that the set up data blocks for all the data to need to work with in the application.
+
+Create Menus
+Menus provide the navigation structure for application. To create menus in Oracle Forms:
+Step1: Open Oracle Forms Builder.
+Step2: Create a new form for menu or use an existing one.
+Step3: Add menu items for each function or feature of application.
+Step4: Define the menu hierarchy and assign triggers or procedures to handle menu item actions.
+Step5: Compile and run the menu form to test the navigation.
+
+Design Forms
+Forms are used to capture, display, and edit data. To design forms in Oracle Forms:
+Step1: Create a new form for each major component of application.
+Step2: Add form elements like text fields, buttons, and lists to forms.
+Step3: Use the Property Palette to configure the properties of form elements and data blocks.
+Step4: Write PL/SQL code to handle business logic and data validation.
+Step5: Test the forms within the Forms Builder environment.
+
+
+
+Create Reports
+Reports provide a way to present data from application. To create reports using Oracle Report Builder:
+Step1: Open Oracle Report Builder.
+Step2: Create a new report or use an existing one.
+Step3: Define the data source for the report (e.g., a database query or PL/SQL procedure).
+Step4: Design the report layout, including headers, footers, and data columns.
+Step5: Add report parameters if needed to allow users to customize the report.
+Step6: enerate and preview the report to ensure it meets the requirements.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+RESULT
+Thus designing an application with Oracle Forms, Menus and Report Builder involves creating a user interface (UI) using Forms and generating reports using Report Builder has done successfully.
