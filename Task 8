@@ -1,0 +1,130 @@
+TASK 8
+CRUD operations in Document databases
+
+AIM:
+To Perform Mongoose using NPM design on MongoDB designing document database and performing CRUD operations like creating, inserting, querying, finding, removing operations
+STEPS:
+Step 1: Install Mongo db using following link
+            https://www.mongodb.com/try/download/community
+Step 2: install Mongosh using the below link
+            https://www.mongodb.com/docs/mongodb-shell/#download-and-install-mongosh
+Step 3: To add the MongoDB Shell binary's location to your PATH environment variable:
+3.1 Open the Control Panel.
+3.2 In the System and Security category, click System.
+3,3 Click Advanced system settings. The System Properties modal displays.
+3.4 Click Environment Variables.
+3.5 In the System variables section, select path and click Edit. The Edit environment  
+      variable modal displays.
+3.6 Click New and add the filepath to your mongosh binary.
+3.7 Click OK to confirm your changes. On each other modal, click OK to confirm    
+      your changes.
+Step 4: To confirm that your PATH environment variable is correctly configured to find 
+             mongosh, open a command prompt and enter the mongosh --help command. If your         
+PATH is configured correctly, a list of valid commands displays.
+
+Step 5: Open mongo shell 4.0 from c:\programfiles\mongoDB\server\bin\mongod.exe
+
+Step 6: Type the CRUD(CREATE READ UPDATE DELETE) COMMANDS GIVEN IN 
+            TEXT FILE.
+
+CRUD OPERATIONS:
+
+db.createCollection("CricketBorad")
+{ "ok" : 1 }
+> db.CricketBoard.insertOne({BoardID: "BID01", Name:"Chennai Cricket Board", Address:"Chennai",Phone:9988776699});
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("651cf1726ebbfe7993adf909")
+}
+db.mylab.find({BoardID:"BID01"})
+{ "_id" : ObjectId("651cf1726ebbfe7993adf909"), "BoardID" : "BID01", "Name" : "Chennai Cricket Board", "Address" : "Chennai", "Phone" : 9988776699 }
+
+db.CricketBoard.insertMany([{BoardID:"BID02",Name:"Tiruvallur Cricket Board",Address:"Chennai",Phone:9977886699},{BoardID:"BID03",Name:"Viluppuram Cricket Board",Address:"Viluppuram",Phone:9966886699},{BoardID:"BID04",Name:"Trichy Cricket Board",Address:"Trichy",Phone:9955886699},{BoardID:"BID05",Name:"Madurai Cricket Board",Address:"Madurai",Phone:9944886699}]);
+
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("651ceee36ebbfe7993adf904"),
+                ObjectId("651ceee36ebbfe7993adf905"),
+                ObjectId("651ceee36ebbfe7993adf906"),
+                ObjectId("651ceee36ebbfe7993adf907")
+        ]
+}
+
+db.CricketBoard.find()
+{ "_id" : ObjectId("651ceee36ebbfe7993adf904"), "BoardID" : "BID02", "Name" : "Tiruvallur Cricket Board", "Address" : "Chennai", "Phone" : 9977886699 }
+{ "_id" : ObjectId("651ceee36ebbfe7993adf905"), "BoardID" : "BID03", "Name" : "Viluppuram Cricket Board", "Address" : "Viluppuram", "Phone" : 9966886699 }
+{ "_id" : ObjectId("651ceee36ebbfe7993adf906"), "BoardID" : "BID04", "Name" : "Trichy Cricket Board", "Address" : "Trichy", "Phone" : 9955886699 }
+{ "_id" : ObjectId("651ceee36ebbfe7993adf907"), "BoardID" : "BID05", "Name" : "Madurai Cricket Board", "Address" : "Madurai", "Phone" : 9944886699 }
+{ "_id" : ObjectId("651cf1726ebbfe7993adf909"), "BoardID" : "BID01", "Name" : "Chennai Cricket Board", "Address" : "Chennai", "Phone" : 9988776699 }
+
+db.CricketBoard.find().pretty()
+{
+        "_id" : ObjectId("651ceee36ebbfe7993adf904"),
+        "BoardID" : "BID02",
+        "Name" : "Tiruvallur Cricket Board",
+        "Address" : "Chennai",
+        "Phone" : 9977886699
+}
+{
+        "_id" : ObjectId("651ceee36ebbfe7993adf905"),
+        "BoardID" : "BID03",
+        "Name" : "Viluppuram Cricket Board",
+        "Address" : "Viluppuram",
+        "Phone" : 9966886699
+}
+{
+        "_id" : ObjectId("651ceee36ebbfe7993adf906"),
+        "BoardID" : "BID04",
+        "Name" : "Trichy Cricket Board",
+        "Address" : "Trichy",
+        "Phone" : 9955886699
+}
+{
+        "_id" : ObjectId("651ceee36ebbfe7993adf907"),
+        "BoardID" : "BID05",
+        "Name" : "Madurai Cricket Board",
+        "Address" : "Madurai",
+        "Phone" : 9944886699
+}
+{
+        "_id" : ObjectId("651cf1726ebbfe7993adf909"),
+        "BoardID" : "BID01",
+        "Name" : "Chennai Cricket Board",
+        "Address" : "Chennai",
+        "Phone" : 9988776699
+}
+
+db.CricketBoard.deleteOne({BoardID:"BID03"})
+{ "acknowledged" : true, "deletedCount" : 1 }
+db.CricketBoard.find().pretty()
+{
+        "_id" : ObjectId("651ceee36ebbfe7993adf904"),
+        "BoardID" : "BID02",
+        "Name" : "Tiruvallur Cricket Board",
+        "Address" : "Chennai",
+        "Phone" : 9977886699
+}
+{
+        "_id" : ObjectId("651ceee36ebbfe7993adf906"),
+        "BoardID" : "BID04",
+        "Name" : "Trichy Cricket Board",
+        "Address" : "Trichy",
+        "Phone" : 9955886699
+}
+{
+        "_id" : ObjectId("651ceee36ebbfe7993adf907"),
+        "BoardID" : "BID05",
+        "Name" : "Madurai Cricket Board",
+        "Address" : "Madurai",
+        "Phone" : 9944886699
+}
+{
+        "_id" : ObjectId("651cf1726ebbfe7993adf909"),
+        "BoardID" : "BID01",
+        "Name" : "Chennai Cricket Board",
+        "Address" : "Chennai",
+        "Phone" : 9988776699
+}
+Result:
+Thus CRUD using NPM design on MongoDB designing document database and performing CRUD operations like creating, inserting, querying, finding, removing operations are performed.
